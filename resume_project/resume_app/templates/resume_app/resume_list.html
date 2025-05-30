@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploaded Resumes</title>
+</head>
+<body>
+ <h2>Uploaded Resumes</h2>
+ <ul>
+     {% for resume in resumes %}
+            <li>{{ resume.name }} - <a href="{{ resume.resume.url }}" target="_blank">Download</a></li>
+        {% endfor %}
+ </ul>
+ <a href="{% url 'upload_resume' %}">Upload New Resume</a>
+
+
+</body>
+</html>

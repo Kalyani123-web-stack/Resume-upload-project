@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Resume</title>
+</head>
+<body>
+        <h2>Upload Your Resume</h2>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_p }}
+         <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'resume_list' %}">View Uploaded Resumes</a>
+
+</body>
+</html>
